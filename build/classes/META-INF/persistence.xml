@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<persistence version="2.0" xmlns="http://java.sun.com/xml/ns/persistence" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://java.sun.com/xml/ns/persistence http://java.sun.com/xml/ns/persistence/persistence_2_0.xsd">
+  <persistence-unit name="AtualizadorFretePU" transaction-type="RESOURCE_LOCAL">
+    <provider>org.hibernate.ejb.HibernatePersistence</provider>
+    <class>br.com.entity.Municipio</class>
+    <class>br.com.entity.Regiao</class>
+    <properties>
+      <property name="hibernate.cache.provider_class" value="org.hibernate.cache.NoCacheProvider"/>
+      <property name="hibernate.show_sql" value="false"/>
+      <property name="hibernate.format_sql" value="false"/>
+      <property name="hibernate.connection.pool_size" value="1"/>
+      <property name="javax.persistence.jdbc.url" value="jdbc:sqlserver://127.0.0.1\sqlexpress:1433;databaseName=SisTrans"/>
+      <property name="javax.persistence.jdbc.user" value="SisTrans"/>
+      <property name="javax.persistence.jdbc.driver" value="com.microsoft.sqlserver.jdbc.SQLServerDriver"/>
+      <property name="javax.persistence.jdbc.password" value="SisTrans"/>
+    </properties>
+  </persistence-unit>
+</persistence>
